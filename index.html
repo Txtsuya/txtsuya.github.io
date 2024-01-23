@@ -37,14 +37,22 @@ slt mec tfq là !?
       />
     </video>
 
-    <audio autoplay loop>
+<!--     <audio autoplay loop>
       <source src="./assets/audio/WHITESPACE.ogg" type="audio/ogg">
+    </audio> -->
+
+    <audio autoplay loop id="myaudio">
+      <source
+        src="./assets/audio/01 Kingdom Hearts 1 OST Title Screen.mp3"
+        type="audio/mp3"
+      />
     </audio>
 
-<!--     <audio controls autoplay loop>
-      <source src="./assets/audio/Kingdom Hearts Dearly Beloved (Original Version).mp3" type="audio/mp3">
-    </audio>
- -->
+    <script>
+      var audio = document.getElementById("myaudio");
+      audio.volume = 0.1;
+    </script>
+
 
     
     <!-- Welcome to whitespace en gif lorsque l'utilisateur rentrera sur le site 
