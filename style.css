@@ -63,16 +63,13 @@ html {
     text-decoration: none;
     color: inherit;
     color: rgb(255, 255, 255);
-    text-shadow: 0px 0px 7px black;
+    text-shadow: 0px 0px 10px black;
     font-size: 12vh;
-    letter-spacing: -3px;
-    /* -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black; */
-    
+    letter-spacing: -3px;    
 }
 
 .title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .menu-links{
