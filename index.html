@@ -57,6 +57,94 @@
         currentIndex = (currentIndex + 1) % titleStates.length;
       }, 500);
     </script>
+    <script>
+      // Array of music tracks (replace these URLs with your actual music files)
+      const musicTracks = [
+        {
+          url: "./assets/audio/Beyond the Skies.mp3",
+          name: "Beyond the Skies",
+        },
+        {
+          url: "./assets/audio/Confession.mp3",
+          name: "Confession",
+        },
+        {
+          url: "./assets/audio/Iru.mp3",
+          name: "Iru",
+        },
+        {
+          url: "./assets/audio/What is Wished.mp3",
+          name: "What is Wished",
+        },
+        {
+          url: "./assets/audio/you.mp3",
+          name: "you",
+        },
+      ];
+
+      // Create audio element
+      const audio = new Audio();
+      audio.autoplay = true;
+      audio.volume = 0.03;
+
+      // Select random track
+      const randomTrack =
+        musicTracks[Math.floor(Math.random() * musicTracks.length)];
+      audio.src = randomTrack.url;
+
+      // Display current song
+      document.getElementById(
+        "currentSong"
+      ).textContent = `Now Playing: ${randomTrack.name}`;
+
+      // Status indicator
+      const statusElement = document.getElementById("status");
+
+      // Handle autoplay
+      audio.addEventListener("playing", () => {
+        statusElement.textContent = "Music playing";
+        statusElement.classList.remove("loading");
+      });
+
+      audio.addEventListener("waiting", () => {
+        statusElement.textContent = "Loading music...";
+        statusElement.classList.add("loading");
+      });
+
+      audio.addEventListener("error", () => {
+        statusElement.textContent =
+          "Error playing music. Please refresh the page.";
+        statusElement.classList.remove("loading");
+      });
+
+      // Many browsers block autoplay by default, so we need to handle that
+      audio.play().catch((error) => {
+        statusElement.textContent =
+          "Click Play to start music (Autoplay blocked by browser)";
+        statusElement.classList.remove("loading");
+      });
+
+      // Toggle play/pause
+      function togglePlay() {
+        if (audio.paused) {
+          audio
+            .play()
+            .then(() => {
+              statusElement.textContent = "Music playing";
+              statusElement.classList.remove("loading");
+            })
+            .catch(() => {
+              statusElement.textContent =
+                "Error playing music. Please refresh the page.";
+              statusElement.classList.remove("loading");
+            });
+        } else {
+          audio.pause();
+          statusElement.textContent = "Music paused";
+          statusElement.classList.remove("loading");
+        }
+      }
+    </script>
   </head>
 
   <body
@@ -71,12 +159,12 @@
         autoplay
         loop
         muted
-        poster="./assets/img/fv_movie2_1aaf21a0de60678450744da0dbaf9ef4.mp4"
+        poster="./assets/img/FTiRYrGWQAAJSYc.jpg"
       >
-        <source
+        <!-- <source
           src="./assets/img/fv_movie2_1aaf21a0de60678450744da0dbaf9ef4.mp4"
           type="video/mp4"
-        />
+        /> -->
       </video>
     </div>
 
