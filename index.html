@@ -1,6 +1,6 @@
-<!-- -- -- -- -- --
-slt mec tfq là ?
--- -- -- -- -- -- -->
+<!-- -- -- -- -- -- -- -- -- -- -- --
+          slt mec tfq là ?
+-- -- -- -- -- -- -- -- -- -- -- -- -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +24,39 @@ slt mec tfq là ?
       href="https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap"
       rel="stylesheet"
     />
+    <script>
+      const titleStates = [
+        "ミ☆･ﾟ*｡☆ ･ ﾟ ｡ ･",
+        "ミ☆･ﾟ*｡☆ ･ ﾟ ｡",
+        "ミ☆･ﾟ*｡☆ ･ ﾟ",
+        "ミ☆･ﾟ*｡☆ ･",
+        "ミ☆･ﾟ*｡☆",
+        "ミ☆･ﾟ*｡",
+        "ミ☆･ﾟ*",
+        "ミ☆･ﾟ",
+        "ミ☆･",
+        "ミ☆",
+        "ミ",
+        "booh",
+        "ミ",
+        "ミ☆",
+        "ミ☆･",
+        "ミ☆･ﾟ",
+        "ミ☆･ﾟ*",
+        "ミ☆･ﾟ*｡",
+        "ミ☆･ﾟ*｡☆",
+        "ミ☆･ﾟ*｡☆ ･",
+        "ミ☆･ﾟ*｡☆ ･ ﾟ",
+        "ミ☆･ﾟ*｡☆ ･ ﾟ ｡",
+        "ミ☆･ﾟ*｡☆ ･ ﾟ ｡ ･",
+      ];
+      let currentIndex = 0;
+
+      setInterval(() => {
+        document.title = titleStates[currentIndex];
+        currentIndex = (currentIndex + 1) % titleStates.length;
+      }, 500);
+    </script>
   </head>
 
   <body
@@ -52,7 +85,7 @@ slt mec tfq là ?
     </audio>
      -->
 
-    <audio autoplay loop id="myaudio">
+    <!-- <audio autoplay loop id="myaudio">
       <source
         src="./assets/audio/01 Kingdom Hearts 1 OST Title Screen.mp3"
         type="audio/mp3"
@@ -62,7 +95,7 @@ slt mec tfq là ?
     <script>
       var audio = document.getElementById("myaudio");
       audio.volume = 0.1;
-    </script>
+    </script> -->
 
     <!-- Welcome to whitespace en gif lorsque l'utilisateur rentrera sur le site 
     <div
@@ -85,12 +118,11 @@ slt mec tfq là ?
     <nav class="main">
       <div class="title effect">
         <a
-          href="https://x.com/BinksAryan/status/1784977211851743708"
+          href="https://www.linkedin.com/in/aryan-bhotey-85b0b8276/"
           target="_blank"
           >aryan</a
         >
       </div>
-
       <div class="menu-links linkeffects">
         <div class="link">
           <a
@@ -99,49 +131,48 @@ slt mec tfq là ?
             target="_blank"
           ></a>
         </div>
-        <div class="link">
+        <div class="link zoom effect">
           <a
             class="fab fa-twitter"
             href="https://twitter.com/BinksAryan"
             target="_blank"
           ></a>
         </div>
-        <div class="link">
+        <div class="link zoom effect">
           <a
             class="fab fa-instagram"
             href="https://www.instagram.com/kamijoaryan/"
             target="_blank"
           ></a>
         </div>
-
-        <div class="link">
+        <div class="link zoom effect">
           <a
             class="fab fa-spotify"
             href="https://open.spotify.com/user/aryan.drgnl"
             target="_blank"
           ></a>
         </div>
-        <div class="link">
+        <div class="link zoom effect">
           <a
             class="fab fa-steam"
             href="https://steamcommunity.com/id/Txtsuya/"
             target="_blank"
           ></a>
         </div>
-        <div class="link">
+        <div class="link zoom effect">
           <a
             class="fab fa-playstation"
             href="https://www.psthc.fr/profil-psn-Txtsuyaa.htm"
             target="_blank"
           ></a>
         </div>
-        <div class="link">
+        <!-- <div class="link zoom effect">
           <a
             class="fab fa-twitch"
             href="https://twitch.com/Txtsuya_"
             target="_blank"
           ></a>
-        </div>
+        </div> -->
       </div>
     </nav>
   </body>
