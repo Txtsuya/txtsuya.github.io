@@ -58,23 +58,14 @@
       }, 500);
     </script>
     <script>
-      // Array of music tracks (replace these URLs with your actual music files)
       const musicTracks = [
         {
           url: "./assets/audio/Beyond the Skies.mp3",
           name: "Beyond the Skies",
         },
         {
-          url: "./assets/audio/Confession.mp3",
-          name: "Confession",
-        },
-        {
           url: "./assets/audio/Iru.mp3",
           name: "Iru",
-        },
-        {
-          url: "./assets/audio/What is Wished.mp3",
-          name: "What is Wished",
         },
         {
           url: "./assets/audio/you.mp3",
@@ -82,25 +73,20 @@
         },
       ];
 
-      // Create audio element
       const audio = new Audio();
       audio.autoplay = true;
       audio.volume = 0.03;
 
-      // Select random track
       const randomTrack =
         musicTracks[Math.floor(Math.random() * musicTracks.length)];
       audio.src = randomTrack.url;
 
-      // Display current song
       document.getElementById(
         "currentSong"
       ).textContent = `Now Playing: ${randomTrack.name}`;
 
-      // Status indicator
       const statusElement = document.getElementById("status");
 
-      // Handle autoplay
       audio.addEventListener("playing", () => {
         statusElement.textContent = "Music playing";
         statusElement.classList.remove("loading");
@@ -117,14 +103,12 @@
         statusElement.classList.remove("loading");
       });
 
-      // Many browsers block autoplay by default, so we need to handle that
       audio.play().catch((error) => {
         statusElement.textContent =
           "Click Play to start music (Autoplay blocked by browser)";
         statusElement.classList.remove("loading");
       });
 
-      // Toggle play/pause
       function togglePlay() {
         if (audio.paused) {
           audio
